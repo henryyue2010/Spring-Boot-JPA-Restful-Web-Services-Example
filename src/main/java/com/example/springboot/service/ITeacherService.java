@@ -2,7 +2,7 @@ package com.example.springboot.service;
 
 import com.example.springboot.domain.Teacher;
 
-public interface TeacherService {
+public interface ITeacherService {
 
 	Teacher findById(Long id);
 

@@ -4,14 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.springboot.domain.Student;
-import com.example.springboot.repository.StudentRepository;
-import com.example.springboot.service.StudentService;
+import com.example.springboot.repository.IStudentRepository;
+import com.example.springboot.service.IStudentService;
 
 @Service
-public class StudentServiceImpl implements StudentService {
+public class StudentServiceImpl implements IStudentService {
 
 	@Autowired
-	private StudentRepository studentRepository;
+	private IStudentRepository studentRepository;
 
 	@Override
 	public Student findById(Long id) {
@@ -31,11 +31,11 @@ public class StudentServiceImpl implements StudentService {
 		return studentRepository.save(student);
 	}
 
-	public StudentRepository getStudentRepository() {
+	public IStudentRepository getStudentRepository() {
 		return studentRepository;
 	}
 
-	public void setStudentRepository(StudentRepository studentRepository) {
+	public void setStudentRepository(IStudentRepository studentRepository) {
 		this.studentRepository = studentRepository;
 	}
 

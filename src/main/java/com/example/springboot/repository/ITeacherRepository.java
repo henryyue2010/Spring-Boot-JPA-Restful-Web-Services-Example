@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.example.springboot.domain.Teacher;
 
 @Repository
-public interface TeacherRepository extends CrudRepository<Teacher, Long> {
+public interface ITeacherRepository extends CrudRepository<Teacher, Long> {
 
 	Teacher findById(Long id);
 

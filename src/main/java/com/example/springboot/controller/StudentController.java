@@ -13,17 +13,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springboot.domain.Student;
 import com.example.springboot.dto.StudentDto;
-import com.example.springboot.service.StudentService;
-import com.example.springboot.service.TeacherService;
+import com.example.springboot.service.IStudentService;
+import com.example.springboot.service.ITeacherService;
 
 @RestController
 public class StudentController implements JsonResponse {
 
 	@Autowired
-	private StudentService studentService;
+	private IStudentService studentService;
 
 	@Autowired
-	private TeacherService teacherService;
+	private ITeacherService teacherService;
 
 	@RequestMapping(value = "/student/{id}", method = RequestMethod.GET)
 	public @ResponseBody Object getStudentById(@PathVariable("id") Long id) {

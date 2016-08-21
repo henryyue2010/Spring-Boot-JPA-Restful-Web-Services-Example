@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.springboot.domain.Teacher;
-import com.example.springboot.service.TeacherService;
+import com.example.springboot.service.ITeacherService;
 
 public class TeacherController implements JsonResponse {
 
 	@Autowired
-	private TeacherService teacherService;
+	private ITeacherService teacherService;
 	
 	@RequestMapping(value = "/teacher/{id}", method = RequestMethod.GET)
 	public @ResponseBody Object getTeacherById(@PathVariable("id") Long id) {
